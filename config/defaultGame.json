@@ -1,0 +1,60 @@
+{
+  "maxDays": 5,
+  "discussionTurns": 2,
+  "players": [
+    {
+      "id": "luna",
+      "name": "Luna",
+      "role": "seer",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "persona": "You are analytical and speak in concise prophetic fragments.",
+      "controller": "llm"
+    },
+    {
+      "id": "thorn",
+      "name": "Thorn",
+      "role": "werewolf",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "persona": "A charismatic but secretive poet trying to hide your hunger.",
+      "controller": "llm"
+    },
+    {
+      "id": "ember",
+      "name": "Ember",
+      "role": "villager",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "persona": "Friendly herbalist who trusts intuition over logic.",
+      "controller": "llm"
+    },
+    {
+      "id": "sage",
+      "name": "Sage",
+      "role": "villager",
+      "provider": "mock",
+      "model": "mock-small",
+      "persona": "Patient librarian who notices inconsistencies and asks pointed questions.",
+      "controller": "llm"
+    },
+    {
+      "id": "rune",
+      "name": "Rune",
+      "role": "werewolf",
+      "provider": "mock",
+      "model": "mock-small",
+      "persona": "Gruff woodsman with a terse speaking style.",
+      "controller": "llm"
+    },
+    {
+      "id": "you",
+      "name": "You",
+      "role": "villager",
+      "provider": "human",
+      "model": "keyboard",
+      "persona": "Curious human investigator watching the village.",
+      "controller": "human"
+    }
+  ]
+}

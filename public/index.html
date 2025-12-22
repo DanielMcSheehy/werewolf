@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM Werewolf Arena</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>LLM Werewolf Arena</h1>
+      <p class="subtitle">Watch multiple language models (and you!) bluff, accuse, and survive.</p>
+      <div class="controls">
+        <button id="start-btn">Start Game</button>
+        <button id="stop-btn">Stop Game</button>
+        <select id="config-select">
+          <option value="">default config</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Roster</h2>
+        <table id="roster-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Provider</th>
+              <th>Status</th>
+              <th>Last Speech</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>Game Log</h2>
+        <div id="log"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Human Turn</h2>
+        <div id="human-status">Waiting for your cue...</div>
+        <form id="human-form">
+          <label>
+            Player ID
+            <input type="text" id="human-player-id" readonly />
+          </label>
+          <label>
+            Prompt
+            <textarea id="human-prompt" rows="5" readonly></textarea>
+          </label>
+          <label>
+            Speech
+            <textarea id="human-speech" rows="3" placeholder="Say something convincing..."></textarea>
+          </label>
+          <label>
+            Target
+            <input type="text" id="human-target" placeholder="player id or leave blank" />
+          </label>
+          <button type="submit" disabled>Submit Turn</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <small>Set OPENAI_API_KEY / ANTHROPIC_API_KEY in your environment to engage real models. Otherwise, mock agents take over.</small>
+    </footer>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

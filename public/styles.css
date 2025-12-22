@@ -1,0 +1,130 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #f6f7fb;
+  background-color: #101322;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1b1f38, #090b13);
+  min-height: 100vh;
+}
+
+header,
+footer {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  color: #b2b7d0;
+  margin: 0.25rem 0 1rem 0;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  background: #ff0074;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  padding: 1rem 1.5rem 3rem;
+}
+
+.panel {
+  background: rgba(17, 20, 35, 0.9);
+  border: 1px solid #272a42;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+#roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#roster-table th,
+#roster-table td {
+  border-bottom: 1px solid #2e3150;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+#roster-table tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+#log {
+  height: 320px;
+  overflow-y: auto;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  background: #0b0d17;
+  border: 1px solid #2d3050;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+#log .entry {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+#human-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#human-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #c2c6e0;
+}
+
+#human-form textarea,
+#human-form input {
+  margin-top: 0.25rem;
+  background: #0b0d17;
+  border: 1px solid #2d3050;
+  border-radius: 6px;
+  color: #f0f2ff;
+  padding: 0.5rem;
+}
+
+#human-status {
+  margin-bottom: 0.5rem;
+  color: #ffd369;
+}
+
+footer {
+  color: #6f7391;
+}
